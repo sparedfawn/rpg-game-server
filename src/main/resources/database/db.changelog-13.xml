@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <changeSet id="13" author="Krzysztof Kalinowski">
+    <createTable tableName="quest">
+      <column name="id" type="uuid">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="experience" type="int">
+      </column>
+      <column name="gold" type="int">
+      </column>
+      <column name="collectible_item_id" type="uuid">
+        <constraints nullable="true" foreignKeyName="fk_eqitem_in_quest" references="equipment_item(id)"/>
+      </column>
+      <column name="amount_of_items" type="int">
+      </column>
+      <column name="duration" type="time">
+      </column>
+      <column name="started" type="datetime">
+      </column>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>

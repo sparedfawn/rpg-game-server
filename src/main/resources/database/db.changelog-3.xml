@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <changeSet id="3" author="Kacper Kalinowski">
+    <createTable tableName="character">
+      <column name="dtype" type="varchar2">
+        <constraints nullable="false" />
+      </column>
+      <column name="id" type="uuid">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="level" type="int">
+      </column>
+      <column name="strength" type="int">
+      </column>
+      <column name="dexterity" type="int">
+      </column>
+      <column name="intelligence" type="int">
+      </column>
+      <column name="luck" type="int">
+      </column>
+      <column name="gold" type="int">
+      </column>
+      <column name="movementSpeed" type="int">
+      </column>
+      <column name="armor" type="int">
+      </column>
+      <column name="experience" type="int">
+      </column>
+      <column name="health" type="int">
+      </column>
+      <column name="boots_id" type="uuid">
+        <constraints nullable="false" foreignKeyName="fk_boots_in_character" references="suitable_item(id)"/>
+      </column>
+      <column name="cape_id" type="uuid">
+        <constraints nullable="false" foreignKeyName="fk_cape_in_character" references="suitable_item(id)"/>
+      </column>
+      <column name="suit_id" type="uuid">
+        <constraints nullable="false" foreignKeyName="fk_suit_in_character" references="suitable_item(id)"/>
+      </column>
+      <column name="weapon_id" type="uuid">
+        <constraints nullable="true" foreignKeyName="fk_weapon_in_character" references="suitable_item(id)"/>
+      </column>
+      <column name="equipment_id" type="uuid">
+        <constraints nullable="true" foreignKeyName="fk_equipment_in_character" references="equipment(id)"/>
+      </column>
+      <column name="quest_id" type="uuid">
+        <constraints nullable="true" foreignKeyName="fk_quest_in_character" references="quest(id)"/>
+      </column>
+      <column name="quest_one" type="uuid">
+        <constraints nullable="true" foreignKeyName="fk_quest_one_in_character" references="quest(id)"/>
+      </column>
+      <column name="quest_two" type="uuid">
+        <constraints nullable="true" foreignKeyName="fk_quest_two_in_character" references="quest(id)"/>
+      </column>
+      <column name="quest_three" type="uuid">
+        <constraints nullable="true" foreignKeyName="fk_quest_three_in_character" references="quest(id)"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>

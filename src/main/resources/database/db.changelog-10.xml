@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="10" author="Patryk Klej">
+        <insert tableName="opponent">
+            <column name="id" value="48cec85e-5150-11ec-bf63-0242ac130002"/>
+            <column name="name" value="op1"/>
+            <column name="strength" value="3"/>
+            <column name="dexterity" value="1"/>
+            <column name="luck" value="1"/>
+            <column name="armor" value="2"/>
+            <column name="health" value="300"/>
+        </insert>
+        <insert tableName="opponent">
+            <column name="id" value="524cbb02-5150-11ec-bf63-0242ac130002"/>
+            <column name="name" value="op2"/>
+            <column name="strength" value="1"/>
+            <column name="dexterity" value="1"/>
+            <column name="luck" value="3"/>
+            <column name="armor" value="2"/>
+            <column name="health" value="300"/>
+        </insert>
+        <insert tableName="opponent">
+            <column name="id" value="884b0e02-5150-11ec-bf63-0242ac130002"/>
+            <column name="name" value="op3"/>
+            <column name="strength" value="1"/>
+            <column name="dexterity" value="3"/>
+            <column name="luck" value="1"/>
+            <column name="armor" value="2"/>
+            <column name="health" value="300"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

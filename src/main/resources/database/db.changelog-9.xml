@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <!-- cape -->
+  <changeSet id="9" author="Krzysztof Kalinowski">
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="d2e079d2-f314-45ea-9508-6efecfc0d7c6"/>
+      <column name="name" value="Cotton"/>
+      <column name="rarity" value="Common"/>
+    </insert>
+
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="0d6f3218-603d-4f2c-80ac-6ee6fd7d0f21"/>
+      <column name="name" value="Needle and Thread"/>
+      <column name="rarity" value="Rare"/>
+    </insert>
+
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="4d6223b3-97fb-4fe8-a9a8-f4881070743e"/>
+      <column name="name" value="Silk"/>
+      <column name="rarity" value="Epic"/>
+    </insert>
+
+    <!-- boots -->
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="0b83427e-f9e3-4b26-b611-980b191a6658"/>
+      <column name="name" value="Leather"/>
+      <column name="rarity" value="Epic"/>
+    </insert>
+
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="fe619c56-f73f-4b10-954c-072ba2be6863"/>
+      <column name="name" value="Rubber"/>
+      <column name="rarity" value="Common"/>
+    </insert>
+
+    <!-- weapons -->
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="72a4f8d3-b2cb-41eb-9488-3ebe62a0fa9b"/>
+      <column name="name" value="Metal"/>
+      <column name="rarity" value="Common"/>
+    </insert>
+
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="4f95fccf-5f25-4aec-8684-6bbdf0c76168"/>
+      <column name="name" value="Wood"/>
+      <column name="rarity" value="Common"/>
+    </insert>
+
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="9e035809-318d-45c3-9055-10d3aca90b9c"/>
+      <column name="name" value="Hammer"/>
+      <column name="rarity" value="Rare"/>
+    </insert>
+
+    <!-- pistol -->
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="6fcb4c56-1e7f-49be-8e04-419ca62a28e2"/>
+      <column name="name" value="Quartz"/>
+      <column name="rarity" value="Legendary"/>
+    </insert>
+
+    <!-- staff -->
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="f1d73303-d36a-49a1-a2ce-17e0e65ed513"/>
+      <column name="name" value="Emerald"/>
+      <column name="rarity" value="Legendary"/>
+    </insert>
+
+    <!-- lightsaber -->
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="17840130-2080-4563-86f1-bde057ab6c01"/>
+      <column name="name" value="Diamond"/>
+      <column name="rarity" value="Legendary"/>
+    </insert>
+
+    <insert tableName="equipment_item">
+      <column name="dtype" value="CollectibleItem"/>
+      <column name="id" value="f5f45c38-7f5e-4e11-aacc-4e55eb641150"/>
+      <column name="name" value="Ruby"/>
+      <column name="rarity" value="Legendary"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

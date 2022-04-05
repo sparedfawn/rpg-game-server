@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <changeSet id="8" author="Krzysztof Kalinowski">
+    <createTable tableName="item_in_equipment">
+      <column name="id" type="uuid">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="amount" type="int">
+        <constraints nullable="false"/>
+      </column>
+      <column name="equipment_id" type="uuid">
+        <constraints nullable="false" foreignKeyName="fk_equipment_in_equipment_item" references="equipment(id)"/>
+      </column>
+      <column name="equipment_item_id" type="uuid">
+        <constraints nullable="false" foreignKeyName="fk_item_in_equipment" references="equipment_item(id)"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="12" author="Krzysztof Kalinowski">
+        <insert tableName="equipment_item">
+            <column name="dtype" value="UsableItem"/>
+            <column name="id" value="f2af46df-977a-4af8-867d-7996f9d2de66"/>
+            <column name="name" value="Strength Potion"/>
+            <column name="rarity" value="Rare"/>
+        </insert>
+        <insert tableName="equipment_item">
+            <column name="dtype" value="UsableItem"/>
+            <column name="id" value="f799e79c-aa9d-4690-a80a-babd3af02d11"/>
+            <column name="name" value="Dexterity Potion"/>
+            <column name="rarity" value="Rare"/>
+        </insert>
+        <insert tableName="equipment_item">
+            <column name="dtype" value="UsableItem"/>
+            <column name="id" value="e4ce337e-097f-4ea8-a00b-61e3531c31aa"/>
+            <column name="name" value="Armor Potion"/>
+            <column name="rarity" value="Rare"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

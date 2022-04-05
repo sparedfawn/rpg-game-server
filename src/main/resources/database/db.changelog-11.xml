@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="11" author="Krzysztof Kalinowski">
+
+        <createTable tableName="effect">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="character_id" type="uuid">
+                <constraints nullable="false" foreignKeyName="fk_effect_in_character" references="character(id)"/>
+            </column>
+            <column name="stat_incremented" type="varchar">
+            </column>
+            <column name="stat_value" type="int">
+            </column>
+            <column name="source" type="varchar">
+            </column>
+        </createTable>
+
+        <sql>ALTER TABLE effect ADD CONSTRAINT check_source CHECK
+            (source in ('WEAPON', 'BOOTS', 'CAPE', 'SUIT', 'USABLE_ITEM'))</sql>
+    </changeSet>
+
+</databaseChangeLog>
